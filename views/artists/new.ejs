@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+  <main>
+    <h1>Add a New Artist</h1>
+    <form id="artistForm" action="/artists" method="POST">
+      <label>Name:
+        <input type="text" name="name">
+      </label>
+      <label>Birth Date:
+        <input type="date" name="birthDate">
+      </label>
+      <label>Hometown (ex. Springfield, MA):
+        <input type="text" name="hometown">
+      </label>
+      <label>Instrument:
+        <select name="instrument">
+          <option>--Choose Instrument--</option>
+          <option value="Trumpet">Trumpet</option>
+          <option value="Saxophone">Saxophone</option>
+          <option value="Trombone">Trombone</option>
+          <option value="Guitar">Guitar</option>
+          <option value="Piano">Piano</option>
+          <option value="Bass">Bass</option>
+          <option value="Drums">Drums</option>
+        </select>
+      </label>
+      <input type="submit" value="Submit Artist">
+    </form>
+  </main>
+
+  <%- include('../partials/footer') %>

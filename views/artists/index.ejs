@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+  <main>
+    <h1>
+      Artists
+    </h1>
+    <% if(user) { %>
+      <a href="/artists/new">Add a New Artist</a>
+      <% } %>
+        <table>
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Instrument</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% artists.forEach(function(artist) { %>
+              <tr>
+                <td>
+                  <a href="/artists/<%= artist._id %>">
+                    <%= artist.name %>
+                  </a>
+                </td>
+                <td>
+                  <%= artist.instrument %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+  </main>
+
+  <%- include('../partials/footer') %>

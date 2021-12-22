@@ -3,20 +3,23 @@
 
 <head>
   <title>
-    <%= title %>
+    jmdb
   </title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
   <nav>
-    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% if (user) { %>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
   </nav>
   <h1>
     <%= title %>
   </h1>
-  <p>Welcome to <%= title %>
-  </p>
-</body>
+  <a href='/artists'>Search for Artists</a>
+  <a href='/albums'>Search for Albums</a>
 
-</html>
+  <%- include('./partials/footer') %>

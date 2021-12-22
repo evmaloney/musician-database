@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+  <h1>
+    <%= artist.name %>
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Birth Date</th>
+        <th>Hometown</th>
+        <th>Instrument</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= artist.birthDate %>
+        </td>
+        <td>
+          <%= artist.hometown %>
+        </td>
+        <td>
+          <%= artist.instrument %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Artist</button>
+  </form>
+  <%= artist.albums %>
+
+    <%- include('../partials/footer') %>

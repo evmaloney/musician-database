@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+  <main>
+    <h1>
+      Albums
+    </h1>
+    <% if(user) { %>
+      <a href="/albums/new">Add a New Album</a>
+      <% } %>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Artist/Band</th>
+              <th>Jazz Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% albums.forEach(function(album) { %>
+              <tr>
+                <td>
+                  <a href="/albums/<%= album._id %>">
+                    <%= album.title %>
+                  </a>
+                </td>
+                <td>
+                  <%= album.artist %>
+                </td>
+                <td>
+                  <%= album.genre %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+  </main>
+
+  <%- include('../partials/footer') %>

@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+  <main>
+    <h1>Add a New Album</h1>
+    <form id="albumForm" action="/albums" method="POST">
+      <label>Title:
+        <input type="text" name="title">
+      </label>
+      <label>Lead Artist/Band:
+        <input type="text" name="artist">
+      </label>
+      <label>Release Date:
+        <input type="date" name="releaseDate">
+      </label>
+      <label>Label:
+        <input type="text" name="label">
+      </label>
+      <label>Jazz Genre:
+        <select name="genre">
+          <option>--Choose Genre--</option>
+          <option value="Afro-Cuban/Latin">Afro-Cuban/Latin</option>
+          <option value="Bebop">Bebop</option>
+          <option value="Big Band/Swing">Big Band/Swing</option>
+          <option value="Cool Jazz">Cool Jazz</option>
+          <option value="Dixieland/Early Jazz">Dixieland/Early Jazz</option>
+          <option value="Free Jazz">Free Jazz</option>
+          <option value="Fusion">Fusion</option>
+          <option value="Hard Bop">Hard Bop</option>
+          <option value="Post Bop">Post Bop</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+      <input type="submit" value="Submit Album">
+    </form>
+  </main>
+
+  <%- include('../partials/footer') %>

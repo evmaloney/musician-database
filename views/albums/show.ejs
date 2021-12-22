@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+  <h1>
+    <%= album.title %>
+  </h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Release Date</th>
+        <th>Artist/Band</th>
+        <th>Label</th>
+        <th>Jazz Style</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= album.releaseDate %>
+        </td>
+        <td>
+          <%= album.artist %>
+        </td>
+        <td>
+          <%= album.label %>
+        </td>
+        <td>
+          <%= album.genre %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <%= album.musicians %>
+
+    <%- include('../partials/footer') %>
