@@ -1,10 +1,13 @@
 const Album = require('../models/album')
+const Artist = require('../models/artist')
 
 module.exports = {
   new: newAlbum,
   create,
   index,
-  show
+  show,
+  deleteAlbum,
+  addToCollection
 }
 
 function newAlbum(req, res) {
@@ -14,11 +17,10 @@ function newAlbum(req, res) {
 }
 
 function create(req, res) {
-  const album = new Album(req.body);
-  album.save(function (err) {
+  Album.create(req.body, function (err, album) {
     if (err) return res.redirect('/albums/new');
     console.log(album);
-    res.redirect(`/albums`);
+    res.redirect('/albums');
   });
 }
 
@@ -39,3 +41,22 @@ function show(req, res) {
     })
   });
 }
+
+function deleteAlbum(req, res) {
+  Album.findByIdAndRemove(req.params.id)
+    .then(function () {
+      res.redirect('/albums')
+    }).catch(function (err) {
+      console.log(err)
+    });
+}
+
+function addToCollection(req, res) {
+  Artist.findById(req.params.artistId, function (err, artist) {
+    artist.collections.push(req.body.albumId)
+    artist.save(function (err) {
+      res.redirect(`/artists/${artist._id}`)
+    });
+  });
+}
+

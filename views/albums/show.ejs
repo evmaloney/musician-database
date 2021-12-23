@@ -16,7 +16,7 @@
     <tbody>
       <tr>
         <td>
-          <%= album.releaseDate %>
+          <%= album.releaseDate.toLocaleDateString() %>
         </td>
         <td>
           <%= album.artist %>
@@ -30,6 +30,8 @@
       </tr>
     </tbody>
   </table>
-  <%= album.musicians %>
+  <form action="/albums/<%= album._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Album</button>
+  </form>
 
-    <%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>

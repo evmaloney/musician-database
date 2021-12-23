@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>
+    Artist Update
+  </title>
+</head>
+
+<body>
+  <nav>
+    <a href="/">jmdb</a>
+    <a href="/artists">Artists</a>
+    <a href="/albums">Albums</a>
+    <% if (user) { %>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
+  </nav>
+  <main>
+    <h1>Change Artist's Instrument</h1>
+    <form action="/artists/<%= artist.id %>?_method=PUT" method="POST">
+      <label>Instrument:
+        <select name="instrument">
+          <option>--Choose Instrument--</option>
+          <option value="Trumpet">Trumpet</option>
+          <option value="Saxophone">Saxophone</option>
+          <option value="Trombone">Trombone</option>
+          <option value="Guitar">Guitar</option>
+          <option value="Piano">Piano</option>
+          <option value="Bass">Bass</option>
+          <option value="Drums">Drums</option>
+        </select>
+      </label>
+      <input type="submit" value="Submit New Instrument">
+    </form>
+  </main>
+
+  <%- include('../partials/footer') %>

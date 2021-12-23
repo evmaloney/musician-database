@@ -14,7 +14,7 @@
     <tbody>
       <tr>
         <td>
-          <%= artist.birthDate %>
+          <%= artist.birthDate.toLocaleDateString() %>
         </td>
         <td>
           <%= artist.hometown %>
@@ -22,12 +22,24 @@
         <td>
           <%= artist.instrument %>
         </td>
+      <tr>
+        <%- artist.collections.map(p=>
+          `<li>${album.releaseDate}${album.title}${album.artist}${album.genre}</li>`
+          ).join('') %>
+      </tr>
       </tr>
     </tbody>
   </table>
+  <form id="addAlbumToArtist" action="/artists/<%= artist.id %>/albums" method="POST">
+    <select name="albumId">
+      <%- albums.map(album=> `<option value="${album._id}">${album.title}</option>`
+        ).join('') %>
+    </select>
+    <button type="submit">Add to Artist's Albums</button>
+  </form>
+  <a href="/artists/<%= artist.id %>/edit">Change Artist's Instrument</a>
   <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete Artist</button>
   </form>
-  <%= artist.albums %>
 
-    <%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>

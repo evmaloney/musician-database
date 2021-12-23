@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const artistSchema = new Schema({
   name: {
     type: String,
-    required: true
+    unique: true,
+    required: true,
   },
   birthDate: {
     type: Date,
@@ -20,8 +21,14 @@ const artistSchema = new Schema({
       'Guitar', 'Piano', 'Bass', 'Drums'],
     required: true
   },
-  albums: [String],
-  postedBy: String
+  collections: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Album'
+  }],
+  postedBy: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 
 module.exports = mongoose.model('Artist', artistSchema)

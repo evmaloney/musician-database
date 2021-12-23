@@ -7,5 +7,8 @@ router.get('/', albumsCtrl.index);
 router.get('/new', isLoggedIn, albumsCtrl.new)
 router.post('/', isLoggedIn, albumsCtrl.create);
 router.get('/:id', albumsCtrl.show);
+router.post('/artists/:artistId/albums', albumsCtrl.addToCollection)
+router.delete('/:id', albumsCtrl.deleteAlbum);
+
 
 module.exports = router
