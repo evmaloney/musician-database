@@ -23,7 +23,7 @@ Technologies used include:
 Once the web page has loaded, click "Log In" to add to the database:
 
 
-![alt text](https://imgur.com/Qb1nY77 "Log In")
+![alt text]( https://imgur.com/Qb1nY77 "Log In")
 
 
 Once back at the homepage, click "Search for Artist". You may click an artist to see what album their information, or if you want to add an artist to the database, click "Add a New Artist".
