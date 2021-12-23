@@ -46,7 +46,7 @@ And that's it! Now other's will be able to see the newly added information wheth
 ## Next Steps
 Icebox items include the following:
 
--Sort Artists/Albums (alphabetically, by year, by genre, etc.)
--Add ratings to albums, and then sort by ratings
--Be able to see the musicians that played on each album on the album's page
--Be able to add a main photo to an artist or an album
+- Sort Artists/Albums (alphabetically, by year, by genre, etc.)
+- Add ratings to albums, and then sort by ratings
+- Be able to see the musicians that played on each album on the album's page
+- Be able to add a main photo to an artist or an album
