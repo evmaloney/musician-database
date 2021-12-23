@@ -31,13 +31,13 @@ Once back at the homepage, click "Search for Artist". You may click an artist to
 After filling out the CORRECT information, click "Submit Artist":
 (WARNING: After adding an artist, you may not edit any of the information other than their instrument. Make sure to add the correct information or you will have to delete the artist and resubmit.)
 
-![alt text](https://imgur.com/n2vrFfi "Submit Artist")
+![alt text]( https://i.imgur.com/n2vrFfi.png "Submit Artist")
 
 You may now click on the artist to see the submitted information. From here, you may add an album to the artist's repertoire. If you do not see an album to add, click the "Albums" link above and then "Add New Album".
 Similar to adding artists, add the CORRECT information and click "Submit Album":
 (WARNING: Again, after adding an album, no edits may be made. Make sure to add the correct information or you will have to delete the album and start again.
 
-![alt text](https://imgur.com/7u5dinJ "Submit Album")
+![alt text](https://i.imgur.com/7u5dinJ.png "Submit Album")
 
 Next, redirect back to the "Artist" page and to the artist's information page. Now, you may choose the newly added album and click "Add to Artist's Albums".
 And that's it! Now other's will be able to see the newly added information whether logged in or not.
