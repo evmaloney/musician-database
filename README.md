@@ -17,7 +17,7 @@ Technologies used include:
 
 
 ## Getting Started
-[Click me](https://jazz-musician-database.herokuapp.com/) to get started!
+[Click me](https://jazz-musician-database-3e7cce339011.herokuapp.com/) to get started!
 
 
 Once the web page has loaded, click "Log In" to add to the database:
